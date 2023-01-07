@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-notification',
-  template: `<div class="notification-div">
+  template: `<div class="alert alert-danger">
     <p>This website uses cookies to provide the better user experience..</p>
   </div>`,
   styles: [
