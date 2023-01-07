@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   source: string = '/assets/shopping.jpg';
-  slogan: string = 'Your one stop shop for everything';
+  slogan: string = 'Your one stop shop for everything from Component class';
 }
