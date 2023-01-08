@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-notification',
-  template: `<div class="alert alert-success">
+  template: `<div class="alert alert-success" [hidden]="displayNotification">
     <p>This website uses cookies to provide the better user experience..</p>
   </div>`,
   styles: [
@@ -10,4 +10,6 @@ import { Component } from '@angular/core';
     'p{ font-size: 16px; }',
   ],
 })
-export class NotificationComponent {}
+export class NotificationComponent {
+  displayNotification: boolean = false;
+}
