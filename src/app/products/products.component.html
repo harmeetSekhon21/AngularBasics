@@ -1,11 +1,12 @@
 <!-- <div *ngFor="let item of [1,2,3,4,5]">
 <p> This is paragrapth # {{ item}}</p>
 </div> -->
-<app-search></app-search>
+<app-search (searchTextChanged)="onSearchTextChanged($event)" ></app-search>
 <app-filter [total]="getTotalProducts()" [free]="getTotalFreeProducts()" [premium]="getTotalPremiumProducts()"
     (filterRadioButtonSelectionChanged)="onFilterRadioButtonChanged($event)"></app-filter>
 <ng-container *ngFor="let p of products">
-    <div  *ngIf="productCountRadioButton ==='All' || productCountRadioButton === p.type">
+    <!-- *ngIf="productCountRadioButton ==='All' || productCountRadioButton === p.type" -->
+    <div  *ngIf="searchText==='' || p.name.toLowerCase().includes(searchText) ">
         <div class="product-container"
             [ngStyle]="{backgroundColor: p.available === 'Available' ? '#D5F5E3' : '#FADBD8'}">
             <div class="image-container"><img [src]="p.image" alt="" style="max-height: 50px; max-width: 50px"></div>

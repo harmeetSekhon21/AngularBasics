@@ -74,8 +74,15 @@ export class ProductsComponent {
   }
 
   productCountRadioButton: string = 'All';
+  searchText: string = '';
+
   onFilterRadioButtonChanged(data: string) {
     this.productCountRadioButton = data;
     console.log('Parent component capture value:' + data);
+  }
+
+  onSearchTextChanged(searchValue: string) {
+    this.searchText = searchValue;
+    console.log(this.searchText);
   }
 }
