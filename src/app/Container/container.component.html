@@ -1,9 +1,4 @@
 <div class="wrapper">
-<<<<<<< HEAD
-    <app-nav></app-nav>
-    <app-header></app-header>
-    <app-notification></app-notification>
-=======
     <!-- using componenet as HTML Tag -->
     <!-- <app-nav></app-nav> -->
 
@@ -16,8 +11,10 @@
 
     <app-header></app-header>
     <app-demo></app-demo>
+    <app-demoviewchild></app-demoviewchild>
+    <app-customer-list #customer></app-customer-list>
+    <p>You have Selected: <b>{{ customer.selectedCustomer?.name}} </b></p>
     <app-notification></app-notification>
     <!-- <app-search></app-search> -->
     <app-products></app-products>
->>>>>>> f81cbc9791b9ba2a2e8ee7a204c5835430c43b35
 </div>

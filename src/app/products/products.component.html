@@ -5,6 +5,8 @@
 <app-filter [total]="getTotalProducts()" [free]="getTotalFreeProducts()" [premium]="getTotalPremiumProducts()"
     (filterRadioButtonSelectionChanged)="onFilterRadioButtonChanged($event)"></app-filter>
 <ng-container *ngFor="let p of products">
+<ng-container *ngIf="productCountRadioButton ==='All' || productCountRadioButton === p.type">
+
     <!-- *ngIf="productCountRadioButton ==='All' || productCountRadioButton === p.type" -->
     <div  *ngIf="searchText==='' || p.name.toLowerCase().includes(searchText.toLowerCase()) ">
         <div class="product-container"
@@ -33,3 +35,4 @@
 
     </div>
     </ng-container>
+</ng-container>
