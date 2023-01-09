@@ -10,6 +10,8 @@ import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { ProductsComponent } from './products/products.component';
 import { FilterComponent } from './filter/filter.component';
+import { DemoComponent } from './demo/demo.component';
+import { CustomerListComponent } from './customer-list/customer-list.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { FilterComponent } from './filter/filter.component';
     SearchComponent,
     ProductsComponent,
     FilterComponent,
+    DemoComponent,
+    CustomerListComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
